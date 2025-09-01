@@ -15,7 +15,7 @@
 
 ✅ Simple and user-friendly interface
 
-🛠️ Prerequisites
+### 🛠️ Prerequisites
 
 #### To run this project, you will need:
 
@@ -70,11 +70,12 @@ private string connectionString =
 4. bin/Debug/Uploader.exe
 
 
-#### Make sure the MySQL server is running.
+### Make sure the MySQL server is running.
 
-#### Run Uploader.exe.
+### Run Uploader.exe.
 
 ### 📂 Project Structure
+``` C#
 ImageUploader/
 │── Form1.cs          # Main form logic
 │── Form1.Designer.cs # UI design
@@ -82,6 +83,7 @@ ImageUploader/
 │── bin/              # Build output
 │── obj/              # Temporary files
 │── .gitignore        # Ignored files for Git
+```
 
 ### 🔑 Key Code Snippets
 
@@ -92,14 +94,14 @@ pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
 ```
 
 
-### Insert image into database:
+#### Insert image into database:
 
 ``` SQL
 string query = "INSERT INTO Image (ImageName, ImageData) VALUES (@ImageName, @ImageData)";
 ```
 
 
-### Display list of images:
+#### Display list of images:
 
 ``` SQL
 string query = "SELECT ImageId, ImageName FROM Image";
@@ -107,7 +109,7 @@ dataGridView1.DataSource = table;
 ```
 
 
-### Preview selected image:
+#### Preview selected image:
 
 ``` C#
 byte[] imageData = (byte[])reader["ImageData"];
